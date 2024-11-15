@@ -89,7 +89,7 @@
 
 .navbar__menu_container{
     display: flex;
-    gap: 18px;
+    gap: 25px;
     /* padding-right: 18px; */
 }
 
@@ -99,24 +99,124 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 100%;
-    border: solid 1px white;
-    display: none;
 }
-
-
+                                /* DAY2 */
 .hero__section_container{
     display: flex;
-    flex-direction: column;
+    flex-direction:column; /*column as inputs are next to each other */
     align-items: center;
     justify-content: center;
     gap: 20px;
-    height: calc(60vh - 65px);
+    height:calc(60vh - 65px);
     
 }
 
 .hero__section_logo{
-    width: 200px;
-    height: 40px;
-    /* height: auto; */
+    display:flex;
+    width:250px;
+    height:auto;
+}
+.hero__section_title{
+    text-align: center;
+    font-size:20px;
+    font-weight:350;
+}
+
+.hero__section_input_container{
+    background-color:white;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:auto;
+    border-radius:20px;
+}
+.hero_input_location, .hero_input_search{
+    padding:3px;
+    border:none;
+    outline:none;
+
+}
+.hero_input_location{
+    width:30%;
+    border-right:2px solid #e0e0e0;
+
+}
+.hero_input_search{
+    width:70%;
+    
+}
+
+@media only screen and (max-width:650px){
+    ,navbar__menu_container .user_icon{
+        display:flex;
+    }
+    .link{
+        display:none;
+    }
+    .hero__section{
+        min-height:100px;
+    }
+    .hero__section_container{
+        flex-direction:column;
+        background-color:transparent;
+        width:100%;  
+    }
+    .hero_input_location, .hero_input_search{
+        padding:20px;
+        border-radius: 10px;
+        width:90%;
+    }
+    .hero__section_container{
+        height:calc(80vh-40px);
+
+    }
+    .hero__section_title{
+        font-size:18px;
+        width:90%
+    }
+
+}
+/* section2 */
+.container{
+    margin:3rem auto;
+    width:90%;
+}
+
+.offerings{
+    display:flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+    align-items:center;
+    justify-content: center;
+}
+.offerings__card{
+    border-radius: 10px;
+    /* background-color: white; */
+    overflow:hidden;
+    border:1px solid #e0e0e0;
+    transition:all 0.4s ease;
+    margin-right:12px
+
+}
+.offerings__card:hover{
+    transform:scale(1.1);
+}
+.offerings__card img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    object-position: center;
+}
+.offer_card{
+    padding:10px;
+
+}
+.offer_card h3{
+    font-size:20px;
+    font-weight:400;
+}
+.offer_card p{
+    font-size:12px;
 }
